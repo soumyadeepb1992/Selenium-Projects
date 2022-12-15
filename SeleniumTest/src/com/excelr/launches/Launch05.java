@@ -1,0 +1,32 @@
+package com.excelr.launches;
+
+import java.util.Scanner;
+
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class Launch05 {
+	public static void main(String[] args) {
+		System.out.println("Enter the Title");
+		Scanner scan=new Scanner(System.in);
+		String etitle=scan.next(); 
+		
+		System.setProperty("webdriver.chrome.driver", "C:\\Selenium Webdriver\\Chrome Driver\\chromedriver_win32\\chromedriver.exe");
+		ChromeDriver driver=new ChromeDriver();
+		driver.manage().window().maximize();
+		driver.get("https://www.gmail.com");
+		String atitle=driver.getTitle();
+		
+		
+		
+		driver.quit();
+		
+		System.out.println("Expected Title is :"+etitle);
+		System.out.println("Actual Title is :"+atitle);
+		
+		if(etitle.equals(atitle) ) {
+			System.out.println("Pass");
+		}
+		else
+			System.out.println("Fail");
+	}
+}

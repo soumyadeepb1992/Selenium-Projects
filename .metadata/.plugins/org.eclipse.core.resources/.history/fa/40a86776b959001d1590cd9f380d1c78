@@ -1,0 +1,11 @@
+package Launches;
+
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+class Launch9
+{
+	public static void main(String[] args)
+	{
+		FirefoxDriver f= new  FirefoxDriver();
+	}
+}

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite parallel="methods" name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" parallel="methods" name="IE(failed)">
+    <parameter name="browser" value="IE"/>
+    <classes>
+      <class name="com.excelr.browserstack.TestNG32_CrossBrowser">
+        <methods>
+          <include name="chooseBrowser"/>
+          <include name="positiveCredentialsBrowserStack1"/>
+        </methods>
+      </class> <!-- com.excelr.browserstack.TestNG32_CrossBrowser -->
+    </classes>
+  </test> <!-- IE(failed) -->
+</suite> <!-- Failed suite [Suite] -->

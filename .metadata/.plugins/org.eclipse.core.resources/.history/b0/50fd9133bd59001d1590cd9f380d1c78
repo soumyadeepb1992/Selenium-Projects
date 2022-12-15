@@ -1,0 +1,30 @@
+/*NOTE:
+-----
+--> Whenever selenium identifies multiple web elements using any of the locators 
+, always the actions will be performed on the 1st web element
+--> Above is the HTML code for email and password field of the Facebook Application
+--> As we can notice the classname is same for both email and password 
+--> Selenium after executing the code 2 web elements would be identified with the same class name
+and hence the action would be performed on the 1st web element
+i.e 
+	email*/
+
+package Launches;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+class Launch16
+{
+	public static void main(String[] args) 
+	{
+		WebDriver driver = new ChromeDriver();
+		driver.manage().window().maximize();
+		driver.get("https://www.facebook.com");
+		
+		WebElement password = driver.findElement(By.className("inputtext"));
+		password.sendKeys("12345678");
+	}
+}

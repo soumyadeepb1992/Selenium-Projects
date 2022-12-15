@@ -1,0 +1,24 @@
+package com.excelr.launches;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class Launch26 {
+	public static void main(String[] args) throws InterruptedException
+	{
+		WebDriver driver = new ChromeDriver();
+		driver.get("C:\\Users\\1304235\\Desktop\\ExcelR\\Selenium\\HTML\\page1.html");
+		
+		Thread.sleep(5000);
+			
+		WebElement link = driver.findElement(By.linkText("Go to child page"));
+		link.click();
+		Thread.sleep(5000);
+		
+		driver.close();  //here only parent tab will be closed
+		//driver.quit();
+	}
+
+}
